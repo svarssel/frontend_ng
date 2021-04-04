@@ -1,0 +1,22 @@
+<header>
+        <nav class="navbar navbar-light bg-light  col-md-12">
+            <span>
+                <a [routerLink]="['/']"><img style="width: 70px; height: 70px;" src="assets/img/logo-vox.png" alt="logo"></a>
+                <strong class="text-primary ml-3">Pedidos de Abertura da empresa</strong>
+            </span>
+            <button type="button" class="btn btn-primary" [routerLink]="['/add']">Solicitar Abertura</button>
+        </nav>
+</header>
+
+<section>
+        <main class="container">
+            
+            <router-outlet></router-outlet>
+             
+        </main>
+   
+
+<footer class="mt-2 p-2 text-center">
+    By: <a href="svarssel@github.io">Fabiano Melo</a>
+
+</footer>

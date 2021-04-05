@@ -38,6 +38,8 @@ export class SessionstorageService {
     const newList = list.filter((listItem) => listItem.id != id);
     this.saveListDB(newList);
   }
+
+  
 }
 
 

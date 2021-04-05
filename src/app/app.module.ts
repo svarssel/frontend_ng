@@ -1,16 +1,20 @@
-import { SessionstorageService } from './company-add/sessionstorage.service';
-
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 
+import { SessionstorageService } from './sessionstorage.service';
+
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { HomeComponent } from './home/home.component';
 import { CompanyAddComponent } from './company-add/company-add.component';
 import { CompanyEditComponent } from './company-edit/company-edit.component';
 import { IConfig, NgxMaskModule } from 'ngx-mask'
+import { MatSliderModule } from '@angular/material/slider';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -22,13 +26,21 @@ const maskConfig: Partial<IConfig> = {
     AppComponent,
     CompanyAddComponent,
     CompanyEditComponent,
-    HomeComponent
+    HomeComponent,
+  
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    MatSliderModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    NgbModule,
+    NgbPaginationModule,
+    NgbAlertModule
+    
     
   ],
   providers: [ SessionstorageService ],

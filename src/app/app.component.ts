@@ -1,6 +1,7 @@
 import { HomeComponent } from './home/home.component';
 import { CompanyAddComponent } from './company-add/company-add.component';
 import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 
 
@@ -12,7 +13,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'frontend';
 
-  public companies: any[];
+  
+
+
+  
 
   
 

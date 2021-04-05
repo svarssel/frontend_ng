@@ -1,4 +1,6 @@
-import { Component, OnInit,  } from '@angular/core';
+import { SessionstorageService } from './../sessionstorage.service';
+import { Component, OnInit, Injectable } from '@angular/core';
+import { FormGroup, FormBuilder, FormControl} from '@angular/forms';
 
 
 @Component({
@@ -7,16 +9,24 @@ import { Component, OnInit,  } from '@angular/core';
   
 })
 export class HomeComponent implements OnInit {
+  
+ form: FormGroup;
+ empresa: any[];
 
-  botaoClicado(){
-    alert('tshow!');
-  }
+
+
  
 
-  constructor() { }
+  constructor(public storage: SessionstorageService) { }
 
   ngOnInit(): void {
    
   }
 
+  listar(){
+     let data = sessionStorage.getItem(JSON.parse("LIST_ORDER", this.form.value));
+     console.log(data);
+    
+
+  }
 }
